@@ -7,11 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Pricing</a></li>
+			<li><a href="#">Volunteer</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+</div>
 
 <%= yield %>
-
-
-
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
