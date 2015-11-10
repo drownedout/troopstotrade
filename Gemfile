@@ -29,7 +29,8 @@ gem 'devise', '~> 3.5', '>= 3.5.2'
 # boostrap SASS
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 
-# 
+# Kaminari
+gem 'kaminari', '~> 0.16.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
