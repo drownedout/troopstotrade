@@ -7,21 +7,50 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="navbar-collapse collapse">
-		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Pricing</a></li>
-			<li><a href="#">Volunteer</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><%= link_to 'Home', root_path %></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Volunteer</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<p class="navbar-text pull-right">
+				<% if user_signed_in? %>
+	 			 Logged in as <strong><%= current_user.name %></strong>.
+	  				<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+	  				<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+				<% else %>
+	  				<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+	  				<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+				<% end %>
+			</p>
+		</div>
 	</div>
-</div>
 
-<%= yield %>
+	<%= yield %>
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-5">
+				<br/>
+				<h4 class="pull-top">Get in <strong>touch</strong></h4>
+				<P>Blah Blah Blah</P>
+
+				<hr>
+
+				<h4>NEI <strong>Office</strong></h4>
+				<ul class="unstyled">
+				<li><i class="icon-map-marker"></i><strong>Address:</strong> 1200 18th Street, Washington DC, 20036 United States</li>
+				<li><i class="icon-phone"></i> <strong>Phone:</strong> (202) 466-0222</li>
+				<li><i class="icon-envelope"></i><strong>Email:</strong><a href="mailto:nei@ncbfaa.org"> NEI</a></li>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

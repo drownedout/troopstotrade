@@ -1,0 +1,30 @@
+<div class="container">
+<h2>Sign Up Today!</h2>
+<p><em>All fields with a * are required</em></p>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, label: 'Full Name', required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: (" #{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :email, label: 'Email',  required: true %>
+    <%= f.input :city, label: 'City', required: true %>
+    <%= f.input :state, label: 'State', required: true %>
+    <%= f.input :zip, label: 'Zip Code', required: true %>
+    <%= f.input :phonenumber, label: 'Phone Number', required: false %>
+    <%= f.input :employmentstatus, label: 'Employment Status', required: false %>
+    <%= f.input :highesteducation, label: 'Highest Education', required: false %>
+    <%= f.input :neicertification, label: 'NEI Certification', required: true %>
+    <%= f.input :militarystatus, label: 'Military Status', collection: ['Active', 'Inactive', 'Retired'], required: true %>
+    <%= f.input :desiredfieldofwork, label: 'Desired Field Of Work', required: false %>
+    <%= f.input :desiredsalary, label: 'Desired Salary', required: false %>
+    <%= f.input :contact, label: 'May We Contact You Directly?',required: false %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>
+</div>
