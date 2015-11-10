@@ -31,6 +31,8 @@ gem 'simple_form', '~> 3.2'
 
 # boostrap SASS
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
+
 # 
 
 # Use ActiveModel has_secure_password
