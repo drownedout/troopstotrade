@@ -11,8 +11,8 @@
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li><%= link_to 'Home', root_path %></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Pricing</a></li>
+				<li><%= link_to 'About', main_about_path %></li>
+				<li><%= link_to 'Pricing', main_pricing_path %></li>
 				<li><a href="#">Volunteer</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
@@ -29,28 +29,28 @@
 		</div>
 	</div>
 
+	<% flash.each do |name, msg| %>
+		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
+
 	<%= yield %>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-1 col-md-5">
-				<br/>
-				<h4 class="pull-top">Get in <strong>touch</strong></h4>
-				<P>Blah Blah Blah</P>
-
-				<hr>
-
-				<h4>NEI <strong>Office</strong></h4>
-				<ul class="unstyled">
-				<li><i class="icon-map-marker"></i><strong>Address:</strong> 1200 18th Street, Washington DC, 20036 United States</li>
-				<li><i class="icon-phone"></i> <strong>Phone:</strong> (202) 466-0222</li>
-				<li><i class="icon-envelope"></i><strong>Email:</strong><a href="mailto:nei@ncbfaa.org"> NEI</a></li>
+	<footer id="footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-11">
+						<h4>NEI <strong>Office</strong></h4>
+						<ul class="unstyled">
+						<li><i class="icon-map-marker"></i><strong>Address:</strong> 1200 18th Street, Washington DC, 20036 United States</li>
+						<li><i class="icon-phone"></i><strong>Phone:</strong> (202) 466-0222</li>
+						<li><i class="icon-envelope"></i><strong>Email:</strong><a href="mailto:nei@ncbfaa.org"> NEI</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 
 </body>
 </html>

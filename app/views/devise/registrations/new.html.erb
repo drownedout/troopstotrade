@@ -4,27 +4,93 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, label: 'Full Name', required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: (" #{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-    <%= f.input :email, label: 'Email',  required: true %>
-    <%= f.input :city, label: 'City', required: true %>
-    <%= f.input :state, label: 'State', required: true %>
-    <%= f.input :zip, label: 'Zip Code', required: true %>
-    <%= f.input :phonenumber, label: 'Phone Number', required: false %>
-    <%= f.input :employmentstatus, label: 'Employment Status', required: false %>
-    <%= f.input :highesteducation, label: 'Highest Education', required: false %>
-    <%= f.input :neicertification, label: 'NEI Certification', required: true %>
-    <%= f.input :militarystatus, label: 'Military Status', collection: ['Active', 'Inactive', 'Retired'], required: true %>
-    <%= f.input :desiredfieldofwork, label: 'Desired Field Of Work', required: false %>
-    <%= f.input :desiredsalary, label: 'Desired Salary', required: false %>
-    <%= f.input :contact, label: 'May We Contact You Directly?',required: false %>
-  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-body">
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+					  <div class="form-inputs">
+					    
+					    <div class="form-group">
+						    <%= f.label :name, "Full Name" %> 
+						    <%= f.text_field :name, required: true, autofocus: true , class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+
+					    <%= f.label :password, "Password" %> <br/>
+					    <%= f.hint "#{@minimum_password_length} characters minimum" if @minimum_password_length %> 
+					    <%= f.password_field :password, required: true, class: "form-control" %> 
+
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :password_confirmation, "Confirm Password" %>
+					    	<%= f.password_field :password_confirmation, required: true, class: "form-control" %>
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :email, "Email" %>
+					    	<%= f.email_field :email, required: true, class: "form-control" %>
+					    </div>
+					    <div class="form-group">	
+					    	<%= f.label :city, "City" %>
+					    	<%= f.text_field :city, required: true, class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+					    	<%= f.label :state, "State" %>
+					    	<%= f.text_field :state, required: true, class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+					    	<%= f.label :zip, "Zip" %>
+					    	<%= f.text_field :zip, required: true, class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+					    	<%= f.label :phonenumber, "Phone Number" %>
+					    	<%= f.text_field :phonenumber, required: false, class: "form-control" %> 
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :employmentstatus, "Employment Status" %><br/>
+					    	<%= f.select :employmentstatus, ['Employed','Unemployed', 'Retired','Other'], required: false, class: "form-control" %> 
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :highesteducation, "Highest Form Of Education" %><br/>
+					    	<%= f.select :highesteducation, ['Some High School', 'High School', 'Some College', 'Associate\'s Degree', 'Bachelor\'s Degree', 'Master\'s Degree', 'PHD', 'Other'], required: false, class: "form-control" %>
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :neicertification, "NEI Certification" %><br/>
+					    	<%= f.select :neicertification, ['None','Certified Exports Specialist (CES)', 'Certified Customs Specialist (CCS)','Both (CES and CCS)'], required: true, class: "form-control" %> 
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :militarystatus, "Military Status" %><br/>
+					    	<%= f.select :militarystatus, ['Active', 'Inactive', 'Retired'], required: true, class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+					    	<%= f.label :desiredfieldofwork, "Desired Field Of Work" %><br/>
+					    	<%= f.select :desiredfieldofwork, ['Import', 'Export', 'Other'],required: false, class: "form-control" %> 
+					    </div>
+
+					    <div class="form-group">
+					    	<%= f.label :desiredsalary, "Desired Salary" %><br/>
+					    	<%= f.select :desiredsalary,['Less than $10,000', '$10,001 - $20,000', '$20,001 - $30,000', '$30,001 - $40,000', '$40,001 - $50,000', '$50,001 - $60,000', '$60,001 - $70,000', '$70,001 - $80,000', '$80,001 - $90,000', '$90,001 - $100,000', 'More than $100,000'], required: false, class: "form-control" %> 
+					    </div>
+					    <div class="form-group">
+					    	<%= f.label :contact, "May We Contact You Directly?" %><br/>
+					    	<%= f.check_box :contact, required: false %>
+					    </div>
+					  </div>
+
+					  <div class="form-actions">
+					    <%= f.button :submit, "Sign Up", class: "btn btn-primary"  %>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <% end %>
 <%= render "devise/shared/links" %>
 </div>
