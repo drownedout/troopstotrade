@@ -1,0 +1,25 @@
+<div class="container">
+<h1><%= current_user.name %></h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+					<p><strong>Email: </strong><%= current_user.email %></p>
+					<p><strong>City: </strong> <%= current_user.city %></p>
+					<p><strong>State: </strong> <%= current_user.state %></p>
+					<p><strong>Zipcode: </strong> <%= current_user.zip %></p>
+					<p><strong>Phone Number: </strong> <%= current_user.phone %></p>
+					<p><strong>Highest Education: </strong> <%= current_user.highesteducation %></p>
+					<p><strong>NEI Certification: </strong> <%= current_user.neicertification %></p>
+					<p><strong>Military Status: </strong> <%= current_user.militarystatus %></p>
+					<p><strong>Desired Field Of Work: </strong> <%= current_user.desiredfieldofwork %></p>
+					<p><strong>Desired Salary: </strong> <%= current_user.desiredsalary %></p>
+					<p><strong>Can We Contact You Directly?:</strong> <%= current_user.contact %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>			
+	<%= link_to 'Edit My Profile', edit_user_registration_path %>
+</div>

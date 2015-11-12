@@ -14,7 +14,7 @@
 					    
 					    <div class="form-group">
 						    <%= f.label :name, "Full Name" %> 
-						    <%= f.text_field :name, required: true, autofocus: true , class: "form-control" %> 
+						    <%= f.text_field :name, required: true, autofocus: true , placeholder: "First Name,  Last Name", class: "form-control" %> 
 					    </div>
 
 					    <div class="form-group">
@@ -49,7 +49,7 @@
 
 					    <div class="form-group">
 					    	<%= f.label :phone, "Phone Number" %>
-					    	<%= f.text_field :phone, required: false, class: "form-control" %> 
+					    	<%= f.text_field :phone, required: false, placeholder: "(XXX) XXX-XXXX", class: "form-control" %> 
 					    </div>
 					    <div class="form-group">
 					    	<%= f.label :employmentstatus, "Employment Status" %><br/>

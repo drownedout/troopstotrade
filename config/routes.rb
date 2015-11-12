@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'main/about'
   get 'main/pricing'
   get 'main/database'
+  get 'main/profile'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
