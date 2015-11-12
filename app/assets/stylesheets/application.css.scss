@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*** Main applicaition styling ***/
+
 body { padding-top: 50px; }
 
 footer * {
@@ -12,4 +14,20 @@ footer {
 	border-top: 4px solid #1F1F1F;
 	font-size: 0.9em;
 	position: relative;
+}
+
+/*** Index Services ***/
+
+.services {
+	padding-top: 30px;
+}
+
+.services p{
+	margin: 30px 0;
+}
+
+/*** Bottom Render On Devise New ***/
+
+#render-new-bottom {
+	padding-bottom: 10px;
 }
