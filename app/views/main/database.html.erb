@@ -1,3 +1,34 @@
-<p><% @user.each do |user| %></p>
-	<%= user.email %>
-<% end %>
+<h1>Candidate Database</h1>
+<div class="table-responsive">
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Zip</th>
+			<th>Phone Number</th>
+			<th>Highest Education</th>
+			<th>NEI Certificate</th>
+			<th>Military Status</th>
+			<th>Desired Field Of Work</th>
+			<th>Desired Salary</th>
+			<th>Contact?</th>
+
+		</tr>
+			<tr><% @user.each do |user| %></tr>
+				<td><%= user.name %></td>
+				<td><%= user.email %></td>
+				<td><%= user.city %></td>
+				<td><%= user.state %></td>
+				<td><%= user.zip %></td>
+				<td><%= user.phonenumber %></td>
+				<td><%= user.highesteducation %></td>
+				<td><%= user.neicertification %></td>
+				<td><%= user.militarystatus %></td>
+				<td><%= user.desiredfieldofwork %></td>
+				<td><%= user.desiredsalary %></td>
+				<td><%= user.contact %></td>
+			<% end %>
+	</table>
+</div>
