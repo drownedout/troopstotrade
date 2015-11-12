@@ -1,27 +1,111 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+  <h2>Edit Your <%= resource_name.to_s.humanize %> Profile</h2>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="form-inputs">
+              <div class="form-group">
+                <%= f.label :name, "Name" %>
+                <%= f.text_field :name, required: true, autofocus: true, class: "form-control" %>
+              </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+              <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+              <div class="form-group">
+              <%= f.label :password, "Password" %>
+              <%= f.password_field :password, autocomplete: "off", placeholder: "Leave It Blank If You Don't Want To Change It", required: false, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+              <%= f.label :password_confirmation, "Password Confirmation" %> 
+              <%= f.password_field :password_confirmation, required: false, class: "form-control" %>
+              </div>
+
+              </div>
+              <div class="form-group">
+                <%= f.label :email, "Email" %>
+                <%= f.email_field :email, required: true, class: "form-control" %>
+              </div>
+              <div class="form-group">  
+                <%= f.label :city, "City" %>
+                <%= f.text_field :city, required: true, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :state, "State" %>
+                <%= f.text_field :state, required: true, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :zip, "Zip" %>
+                <%= f.text_field :zip, required: true, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :phone, "Phone Number" %>
+                <%= f.text_field :phone, required: false, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :employmentstatus, "Employment Status" %><br/>
+                <%= f.select :employmentstatus, ['Employed','Unemployed', 'Retired','Other'], required: false, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :highesteducation, "Highest Form Of Education" %><br/>
+                <%= f.select :highesteducation, ['Some High School', 'High School', 'Some College', 'Associate\'s Degree', 'Bachelor\'s Degree', 'Master\'s Degree', 'PHD', 'Other'], required: false, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :neicertification, "NEI Certification" %><br/>
+                <%= f.select :neicertification, ['None','Certified Exports Specialist (CES)', 'Certified Customs Specialist (CCS)','Both (CES and CCS)'], required: true, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :militarystatus, "Military Status" %><br/>
+                <%= f.select :militarystatus, ['Active', 'Inactive', 'Retired'], required: true, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :desiredfieldofwork, "Desired Field Of Work" %><br/>
+                <%= f.select :desiredfieldofwork, ['Import', 'Export', 'Other'],required: false, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :desiredsalary, "Desired Salary" %><br/>
+                <%= f.select :desiredsalary,['Less than $10,000', '$10,001 - $20,000', '$20,001 - $30,000', '$30,001 - $40,000', '$40,001 - $50,000', '$50,001 - $60,000', '$60,001 - $70,000', '$70,001 - $80,000', '$80,001 - $90,000', '$90,001 - $100,000', 'More than $100,000'], required: false, class: "form-control" %> 
+              </div>
+
+              <div class="form-group">
+                <%= f.label :contact, "May We Contact You Directly?" %><br/>
+                <%= f.check_box :contact, required: false %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label :current_password, "Enter Your Password To Confirm Changes" %>
+                <%= f.password_field :current_password, placeholder: "We Need Your Current Password To Confirm Your Changes", required: true, class: "form-control" %>
+              </div>
+              <div class="form-actions">
+              <%= f.button :submit, "Update", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Cancel my account</h3>
+
+    <p>Unhappy? <%= link_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+    <%= link_to "Back", :back %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
