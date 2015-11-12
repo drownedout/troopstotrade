@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'main/index'
   get 'main/about'
   get 'main/pricing'
+  get 'main/database'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
