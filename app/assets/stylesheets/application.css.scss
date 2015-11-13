@@ -8,6 +8,27 @@ body {
 	height: 100%;
 }
 
+.navbar-inverse {
+	background-color: #1f3d7a;
+	padding: 3px 0;
+}
+
+.navbar-nav > li {
+	color: #ffffff !important;
+}
+
+.navbar-nav > li > a {
+	color: #ffffff !important;
+}
+
+.navbar-link {
+	color: #ffffff !important;
+}
+
+.navbar-text {
+	color: #ffffff !important;
+}
+
 .jumbotron .media {
 	margin: 50px 0;
 }
@@ -36,12 +57,24 @@ footer * {
 }
 
 footer {
-	background: #121214;
-	border-top: 4px solid #1F1F1F;
+	background: #1f3d7a;
+	border-top: 4px solid #1f3d7a;
 	font-size: 0.9em;
 	position: relative;
+	margin-top: 30px;
 }
 
+.foot-logo {
+	height: 40%;
+	width: 40%;
+	margin-left: -100px;
+	padding-top: 5px;
+}
+
+.text-left > li {
+	text-align: right;
+	margin-right: -10;
+}
 
 /*** Index Services ***/
 
@@ -102,6 +135,14 @@ footer {
 
 .pricing-icon {
 	margin-bottom: 20px;
+}
+
+/*** About Page ***/
+
+#about {
+	background-image: url("pen.jpg");
+	background-size: cover;
+	color: #ffffff;
 }
 
 /*** Profile Page ***/

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :orgs
   devise_for :users
   get 'main/index'
   get 'main/about'

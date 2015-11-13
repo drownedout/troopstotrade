@@ -18,7 +18,8 @@
 				<li><a href="#">Contact</a></li>
 				<% if user_signed_in? %>
 	  			<li><%= link_to 'View My Profile', main_profile_path, :class => 'navbar-link' %></li>
-				<% else %>
+				<% elsif org_signed_in?%>
+				<li><%= link_to 'Candidate Database', main_database_path, :class => 'navbar-link' %></li>
 				<% end %>
 
 			</ul>
@@ -27,6 +28,10 @@
 	 			 Logged in as <strong><%= current_user.name %> |</strong>
 	  				<%= link_to 'Edit Profile', edit_user_registration_path, :class => 'navbar-link' %> |
 	  				<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	  			<% elsif org_signed_in? %>
+	  				Logged in as <strong><%= current_org.contactname %> |</strong>
+	  				<%= link_to 'Edit Profile', edit_org_registration_path, :class => 'navbar-link' %> |
+	  				<%= link_to "Logout", destroy_org_session_path, method: :delete, :class => 'navbar-link'  %>
 				<% else %>
 	  				<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
 	  				<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
@@ -45,12 +50,15 @@
 		<div class="footer-copyright">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-11">
-						<h4>NEI <strong>Office</strong></h4>
-						<ul class="unstyled">
-						<li><i class="icon-map-marker"></i><strong>Address:</strong> 1200 18th Street, Washington DC, 20036 United States</li>
-						<li><i class="icon-phone"></i><strong>Phone:</strong> (202) 466-0222</li>
-						<li><i class="icon-envelope"></i><strong>Email:</strong><a href="mailto:nei@ncbfaa.org"> NEI</a></li>
+					<div class="col-md-4">
+						<%= image_tag("sidelogo.png", alt:"NEI Logo", class: "foot-logo") %>
+					</div>
+					<div class="col-md-offset-3 col-md-5">
+						<ul class="list-unstyled text-left">
+							<li><i class="icon-map-marker"></i><strong>Address:</strong> 1200
+							18th Street<br/> Washington DC 20036
+							<li><i class="icon-phone"></i><strong>Phone:</strong> (202) 466-0222</li>
+							<li><i class="icon-envelope"></i><strong>Email:</strong><a href="mailto:nei@ncbfaa.org"> nei@ncbfaa.org</a></li>
 						</ul>
 					</div>
 				</div>
