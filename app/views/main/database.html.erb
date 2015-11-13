@@ -2,7 +2,7 @@
 <div class="table-responsive">
 	<table class="table">
 		<tr>
-			<th>Name</th>
+			<th>Last Name, First Name</th>
 			<th>Email</th>
 			<th>City</th>
 			<th>State</th>
@@ -17,7 +17,7 @@
 
 		</tr>
 			<tr><% @user.each do |user| %></tr>
-				<td><%= user.name %></td>
+				<td><%= user.lastname %>, <%= user.name %></td>
 				<td><%= user.email %></td>
 				<td><%= user.city %></td>
 				<td><%= user.state %></td>

@@ -3,7 +3,10 @@
 
 /*** Main applicaition styling ***/
 
-body { padding-top: 50px; }
+body { 
+	padding-top: 50px;
+	height: 100%;
+}
 
 #jumbotron-index {
 	background-image: url("background.jpg");
