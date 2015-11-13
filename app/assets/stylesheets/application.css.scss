@@ -8,6 +8,18 @@ body {
 	height: 100%;
 }
 
+.jumbotron .media {
+	margin: 50px 0;
+}
+
+.jumbotron .media-body h1 {
+	margin-top: 100 px;
+}
+
+.jumbotron p {
+	padding-top: 20px;
+}
+
 #jumbotron-index {
 	background-image: url("background.jpg");
 	color: #ffffff;
@@ -39,6 +51,65 @@ footer {
 
 .services p{
 	margin: 30px 0;
+}
+
+/*** Pricing Page ***/
+
+.jumbotron-pricing {
+	color: #ffffff;
+	background-color: #61799E;
+}
+
+.jumbotron-pricing p {
+	padding-top: 20px;
+}
+
+.jumbotron-pricing .media {
+	margin: 50px 0;
+}
+
+.jumbotron-pricing .media-body {
+	margin-top: 100px;
+}
+
+.pricing-intro {
+	margin-bottom: 70px;
+}
+
+.pricing-table .panel {
+	background: #eeeeee;
+}
+
+.pricing-table .panel-danger {
+	border: 1px solid #CD5A48;
+}
+
+.pricing-table .panel-info {
+	border: 1px solid #3A87B0;
+}
+
+.pricing-table .panel-success {
+	border: 1px solid #468847;
+}
+
+.pricing-intro h2 {
+	margin-bottom: 20px;
+}
+
+.price-panel {
+	font-size: 35px;
+}
+
+.pricing-icon {
+	margin-bottom: 20px;
+}
+
+/*** Profile Page ***/
+
+.profile-heading {
+	margin-bottom: 10px;	
+	background-color: #b3e6ff;
+	color: #004466;
 }
 
 /*** Bottom Render On Devise New ***/
