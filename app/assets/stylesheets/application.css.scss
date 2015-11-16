@@ -67,13 +67,15 @@ footer {
 .foot-logo {
 	height: 40%;
 	width: 40%;
+	max-height: 64px;
+	max-width: 144px;
 	margin-left: -100px;
 	padding-top: 5px;
 }
 
 .text-left > li {
 	text-align: right;
-	margin-right: -10;
+
 }
 
 /*** Index Services ***/

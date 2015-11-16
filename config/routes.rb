@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   get 'main/database'
   get 'main/profile'
 
+  resources :jobs
+  get 'jobs/new'
+  get 'jobs/show'
+  get 'jobs/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -19,6 +19,7 @@
 				<% if user_signed_in? %>
 	  			<li><%= link_to 'View My Profile', main_profile_path, :class => 'navbar-link' %></li>
 				<% elsif org_signed_in?%>
+				<li><%= link_to 'Submit A Job Posting', jobs_new_path, :class => 'navbar-link' %></li>
 				<li><%= link_to 'Candidate Database', main_database_path, :class => 'navbar-link' %></li>
 				<% end %>
 
