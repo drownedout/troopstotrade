@@ -17,6 +17,7 @@
 				<li><a href="#">Volunteer</a></li>
 				<li><a href="#">Contact</a></li>
 				<% if user_signed_in? %>
+				<li><%= link_to 'Job Postings', jobs_path, :class => 'navbar-link' %></li>
 	  			<li><%= link_to 'View My Profile', main_profile_path, :class => 'navbar-link' %></li>
 				<% elsif org_signed_in?%>
 				<li><%= link_to 'Submit A Job Posting', jobs_new_path, :class => 'navbar-link' %></li>

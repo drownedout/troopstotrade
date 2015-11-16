@@ -1,6 +1,9 @@
 <div class="container">
 	<h2><%= @job.title %></h2>
 	<p><%= @job.description %></p>
-	<p><%= @job.company %></p>	
+	<p><%= @job.company %></p>
+	<p><%= link_to @job.url %></p>
+	<p>Submitted <%= time_ago_in_words(@job.created_at) %> ago</p>
+	<%= link_to "Return to Jobs Board", jobs_path %>	
 
 </div>

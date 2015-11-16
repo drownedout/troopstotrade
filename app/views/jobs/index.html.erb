@@ -1,6 +1,20 @@
 <div class="container">
-	<% @jobs.each do |job| %>
-		<h2><%= job.title %></h2>
-		<p><%= job.description %></p>
-	<% end %>
+	<h2>Job Postings</h2>
+
+	<div class="table-responsive soft-border">
+		<table class="table table-striped">
+			<tr>
+				<th>Job Title</th>
+				<th>Job Description</th>
+				<th>Company</th>
+				<th>Submitted</th>
+			</tr>
+			<tr><% @jobs.each do |job| %></tr>
+				<td><%= link_to job.title, job %></td>
+				<td><%= job.description %></td>
+				<td><%= job.company %></td>
+				<td>Submitted <%= time_ago_in_words(job.created_at) %></td>
+			<% end %>
+		</table>
+	</div>
 </div>
