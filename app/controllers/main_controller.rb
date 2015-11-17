@@ -7,7 +7,7 @@ class MainController < ApplicationController
 
   def database
   	if org_signed_in?
-  		@user = User.all
+  		@user = User.page(params[:page]).per(25)
   	else
   		redirect_to root_path
   	end

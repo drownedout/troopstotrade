@@ -1,25 +1,22 @@
-<% if org_signed_in? %>
-	<div class="container">
-		<h2>Job Postings</h2>
+<div class="container">
+	<h2>Job Postings</h2>
 
-		<div class="table-responsive soft-border">
-			<table class="table table-striped">
-				<tr>
-					<th>Job Title</th>
-					<th>Job Description</th>
-					<th>Company</th>
-					<th>Submitted</th>
-				</tr>
-				<tr><% @jobs.each do |job| %></tr>
-					<td><%= link_to job.title, job %></td>
-					<td><%= job.description %></td>
-					<td><%= job.org.company %></td>
+	<div class="table-responsive soft-border">
+		<table class="table table-striped">
+			<tr>
+				<th>Job Title</th>
+				<th>Job Description</th>
+				<th>Company</th>
+				<th>Submitted</th>
+			</tr>
+			<tr><% @jobs.each do |job| %></tr>
+				<td><%= link_to job.title, job %></td>
+				<td><%= job.description %></td>
+				<td><%= job.org.company %></td>
 
-					<td>Submitted <%= time_ago_in_words(job.created_at) %> ago</td>
-				<% end %>
-			</table>
-		</div>
+				<td>Submitted <%= time_ago_in_words(job.created_at) %> ago</td>
+			<% end %>
+		</table>
 	</div>
-<% else %>
- <h1>There's Nothing Here</h1>
-<% end %>
+	<%= page_entries_info @jobs %>
+</div>

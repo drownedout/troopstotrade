@@ -3,7 +3,7 @@ class JobsController < ApplicationController
 
 	def index
 		if org_signed_in?
-			@jobs = Job.all.order("created_at DESC")
+			@jobs = Job.page(params[:page]).per(25).order("created_at DESC")
 		else
 			redirect_to root_path
 		end
