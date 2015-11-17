@@ -14,17 +14,6 @@ module ApplicationHelper
     nil
   end
 
-  class TrueClass
-  	def yesno
-  		"Yes"
-  	end
-  end
-
-  class FalseClass
-  	def yesno
-  		"No"
-  	end
-  end
 
 
 end

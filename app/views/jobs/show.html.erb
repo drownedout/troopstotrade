@@ -1,9 +1,13 @@
 <div class="container">
 	<h2><%= @job.title %></h2>
 	<p><%= @job.description %></p>
-	<p><%= @job.company %></p>
+	<p><%= @job.org.company %></p>
 	<p><%= link_to @job.url %></p>
 	<p>Submitted <%= time_ago_in_words(@job.created_at) %> ago</p>
-	<%= link_to "Return to Jobs Board", jobs_path %>	
+	<ul class="list-unstyled">
+	<li><%= link_to "Edit Posting", edit_job_path(@job), class: "btn btn-sm btn-success" %> </li>
+	<li><%= link_to "Return to Jobs Board", jobs_path, class: "btn btn-sm btn-info" %> </li>
+	<li><%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %> </li>
+	</ul>
 
 </div>

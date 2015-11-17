@@ -2,27 +2,22 @@ class JobsController < ApplicationController
 	before_action :find_job, only: [:show, :edit, :update, :destroy]
 
 	def index
-		if params[:category].blank?
-			@jobs = Job.all.order("created_at DESC")
-		else
-			@category_id = Category.find_by(name: params[:category]).id
-			@jobs = Job.where(category_id: @category_id).order("created_at DESC")
-		end
+		@jobs = Job.all.order("created_at DESC")
 	end
 
 	def show
 	end
 
 	def new
-		if org_signed_in?
-			@job = Job.new
+		if org_signed_in?	
+			@job = current_org.jobs.build
 		else
 			redirect_to root_path
 		end
 	end
 
 	def create
-		@job = Job.new(job_params)
+		@job = current_org.jobs.build(job_params)
 
 		if @job.save
 			redirect_to @job
@@ -50,7 +45,7 @@ class JobsController < ApplicationController
 	private
 
 	def job_params
-		params.require(:job).permit(:title, :description, :company, :url, :id)
+		params.require(:job).permit(:title, :description, :url)
 	end
 
 	def find_job
