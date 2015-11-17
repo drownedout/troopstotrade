@@ -2,7 +2,11 @@ class JobsController < ApplicationController
 	before_action :find_job, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@jobs = Job.all.order("created_at DESC")
+		if org_signed_in?
+			@jobs = Job.all.order("created_at DESC")
+		else
+			redirect_to root_path
+		end
 	end
 
 	def show

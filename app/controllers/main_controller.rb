@@ -6,6 +6,10 @@ class MainController < ApplicationController
   end
 
   def database
-  	@user = User.all
+  	if org_signed_in?
+  		@user = User.all
+  	else
+  		redirect_to root_path
+  	end
   end
 end

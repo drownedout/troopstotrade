@@ -24,6 +24,7 @@
 						</div>
 						<div class="form-action">
 							<%= f.button :submit, class: "btn btn-primary" %>
+							<%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
 						</div>
 							<% end %>
 
