@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'main/pricing'
   get 'main/database'
   get 'main/profile'
+  get 'main/volunteer'
+  get 'main/contact'
 
   resources :jobs
   get 'jobs/new'

@@ -14,8 +14,8 @@
 				<li><%= link_to 'Home', root_path %></li>
 				<li><%= link_to 'About', main_about_path %></li>
 				<li><%= link_to 'Pricing', main_pricing_path %></li>
-				<li><a href="#">Volunteer</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><%= link_to 'Volunteer', main_volunteer_path %></li>
+				<li><%= link_to 'Contact', main_contact_path %></li>
 				<% if user_signed_in? %>
 	  			<li><%= link_to 'View My Profile', main_profile_path, :class => 'navbar-link' %></li>
 				<% elsif org_signed_in?%>
