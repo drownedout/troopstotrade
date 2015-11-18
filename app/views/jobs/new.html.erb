@@ -1,32 +1,34 @@
-<div class="container">
-	<h2>Submit A Job Posting</h2>
-	<%= simple_form_for @job  do |f| %>
-	<%= f.error_notification %>
+<div class="fill">
 	<div class="container">
-		<div class="row">
-	    	<div class="col-md-6">
-	        	<div class="panel panel-default">
-	          		<div class="panel-body">
-	            		<div class="form-inputs">
-	              			<div class="form-group">
-	              				<%= f.label :title, "Job Title" %>
-								<%= f.text_field :title, label: "Job Title", class: "form-control" %>
+		<h2>Submit A Job Posting</h2>
+		<%= simple_form_for @job  do |f| %>
+		<%= f.error_notification %>
+		<div class="container">
+			<div class="row">
+		    	<div class="col-md-6">
+		        	<div class="panel panel-default">
+		          		<div class="panel-body">
+		            		<div class="form-inputs">
+		              			<div class="form-group">
+		              				<%= f.label :title, "Job Title" %>
+									<%= f.text_field :title, label: "Job Title", class: "form-control" %>
+								</div>
+								<div class="form-group">
+									<%= f.label :description, "Job Description" %>
+									<%= f.text_area :description, class: "form-control" %>
+								</div>
+			
+								<div class="form-group">
+									<%= f.label :url, "Link To Job" %>
+									<%= f.text_field :url, class: "form-control" %>
+								</div>
 							</div>
-							<div class="form-group">
-								<%= f.label :description, "Job Description" %>
-								<%= f.text_area :description, class: "form-control" %>
+							<div class="form-action">
+								<%= f.button :submit, class: "btn btn-primary" %>
 							</div>
-		
-							<div class="form-group">
-								<%= f.label :url, "Link To Job" %>
-								<%= f.text_field :url, class: "form-control" %>
-							</div>
-						</div>
-						<div class="form-action">
-							<%= f.button :submit, class: "btn btn-primary" %>
-						</div>
-							<% end %>
+								<% end %>
 
+						</div>
 					</div>
 				</div>
 			</div>

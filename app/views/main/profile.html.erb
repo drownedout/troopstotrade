@@ -1,43 +1,45 @@
-<div class="jumbotron profile-heading text-center">
-		<h1>Troops To Trade Profile</h1>
-</div>
-<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h1 class="text-center">Contact Information</h1>
-					</div>
-					<div class="panel-body text-center">
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><strong>Full Name: </strong><%= current_user.name %> <%= current_user.lastname %></li>
-							<li class="list-group-item"><strong>Email: </strong><%= current_user.email %></li>
-							<li class="list-group-item"><strong>City: </strong> <%= current_user.city %></li>
-							<li class="list-group-item"><strong>State: </strong> <%= current_user.state %></li>
-							<li class="list-group-item"><strong>Zipcode: </strong> <%= current_user.zip %></li>
-							<li class="list-group-item"><strong>Phone Number: </strong> <%= current_user.phone %></li>
-						</ul>
+<div class="fill">
+	<div class="profile-heading text-center">
+			<h1>Troops To Trade Profile</h1>
+	</div>
+	<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h1 class="text-center">Contact Information</h1>
+						</div>
+						<div class="panel-body text-center">
+							<ul class="list-group list-group-flush text-center">
+								<li class="list-group-item"><strong>Full Name: </strong><%= current_user.name %> <%= current_user.lastname %></li>
+								<li class="list-group-item"><strong>Email: </strong><%= current_user.email %></li>
+								<li class="list-group-item"><strong>City: </strong> <%= current_user.city %></li>
+								<li class="list-group-item"><strong>State: </strong> <%= current_user.state %></li>
+								<li class="list-group-item"><strong>Zipcode: </strong> <%= current_user.zip %></li>
+								<li class="list-group-item"><strong>Phone Number: </strong> <%= current_user.phone %></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="col-md-6">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h1 class="text-center">Additional Information</h1>
-					</div>
-					<div class="panel-body text-center">
-						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><strong>Highest Education: </strong> <%= current_user.highesteducation %></li>
-							<li class="list-group-item"><strong>NEI Certification: </strong> <%= current_user.neicertification %></li>
-							<li class="list-group-item"><strong>Military Status: </strong> <%= current_user.militarystatus %></li>
-							<li class="list-group-item"><strong>Desired Field Of Work: </strong> <%= current_user.desiredfieldofwork %></li>
-							<li class="list-group-item"><strong>Desired Salary: </strong> <%= current_user.desiredsalary %></li>
-							<li class="list-group-item"><strong>Can We Contact You Directly?:</strong> <%= current_user.contact %></li>
-						</ul>
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h1 class="text-center">Additional Information</h1>
+						</div>
+						<div class="panel-body text-center">
+							<ul class="list-group list-group-flush text-center">
+								<li class="list-group-item"><strong>Highest Education: </strong> <%= current_user.highesteducation %></li>
+								<li class="list-group-item"><strong>NEI Certification: </strong> <%= current_user.neicertification %></li>
+								<li class="list-group-item"><strong>Military Status: </strong> <%= current_user.militarystatus %></li>
+								<li class="list-group-item"><strong>Desired Field Of Work: </strong> <%= current_user.desiredfieldofwork %></li>
+								<li class="list-group-item"><strong>Desired Salary: </strong> <%= current_user.desiredsalary %></li>
+								<li class="list-group-item"><strong>Can We Contact You Directly?:</strong> <%= current_user.contact %></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<%= link_to 'Edit My Profile', edit_user_registration_path %>
-</div>			
+		<%= link_to 'Edit My Profile', edit_user_registration_path %>
+	</div>
+</div>		

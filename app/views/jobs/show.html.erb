@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container fill	">
 	<h2><%= @job.title %></h2>
 	<div class="container">
 		<div class="row">
@@ -10,9 +10,12 @@
 			</div>
 		</div>
 		<ul class="list-unstyled list-inline">
+		<% if @job.org.company == current_org.company %>
 		<li><%= link_to "Edit Posting", edit_job_path(@job), class: "btn btn-sm btn-success" %> </li>
-		<li><%= link_to "Return to Jobs Board", jobs_path, class: "btn btn-sm btn-info" %> </li>
 		<li><%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %> </li>
+		<% else %>
+		<% end %>
+		<li><%= link_to "Return to Jobs Board", jobs_path, class: "btn btn-sm btn-info" %> </li>
 		</ul>
 
 	</div>

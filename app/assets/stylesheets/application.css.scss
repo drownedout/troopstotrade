@@ -89,6 +89,10 @@ footer {
 
 }
 
+.fill {
+	height: 80vh;
+}
+
 /*** Index Services ***/
 
 .services {
@@ -163,12 +167,45 @@ footer {
 	color: #ffffff;
 }
 
+.partners {
+	background-color: #3f80c0;
+	color: #ffffff;
+	padding: 20px 0;
+	margin-top: 10px;
+}
+
 /*** Profile Page ***/
 
 .profile-heading {
-	margin-bottom: 10px;	
-	background-color: #a3c2c2;
-	color: #004466;
+	margin-bottom: 40px;	
+}
+
+/*** Contact Page ***/
+
+#contact_title {
+	font-size: 80px;
+	padding-top: 10px;
+}
+
+#contact_sub {
+	padding: 20px 0;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.contact_header {
+	background-color: #acacac;
+	color: #ffffff;
+	margin-bottom: 50px;
+}
+
+.offset_contact {
+	padding-left: 15px;
+}
+
+.map_contact {
+	padding: 45px 0;
+	font-size: 24px;
 }
 
 /*** Bottom Render On Devise New ***/
