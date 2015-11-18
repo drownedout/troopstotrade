@@ -28,11 +28,16 @@ gem 'simple_form', '~> 3.2'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 # boostrap SASS
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
-
 # Kaminari
 gem 'kaminari', '~> 0.16.3'
 # Active Admin
 gem 'activeadmin', '~> 1.0.0.pre2'
+# Cancancan
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
+# Draper
+gem 'draper', '~> 2.1'
+# Pundit
+gem 'pundit', '~> 1.0', '>= 1.0.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
