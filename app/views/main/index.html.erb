@@ -20,7 +20,7 @@
 		<div class="col-lg-6 text-center">
 			<div>
 			 <%= image_tag("Soldier.png", alt:"Soldier") %>
-			 <h2><strong>For Candidates</strong></h2>
+			 <h2>For Candidates</h2>
 			 <p> Are you a veteran or active military personnel preparring to transition to civilian life? Do you have experience or interest in logistics or global trade? If so we invite you to become part of our Troops To Trade program. Through this program, military personnel, both active and veterans, are eligible to take our CCS/CES courses at 1/2 price, with no membership fees required. Once you successfully complete a course and become certified, you will be entered into a candidate database that will be searchable by top trade companies across the country! So, what are you waiting for? <a href="#"> Submit an application today!</a></p>
 			</div>
 		</div>
@@ -33,3 +33,56 @@
 		</div>
 	</div>
 </div>
+<div class="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-center">Have a question? Let us know.</h3>
+			</div>			
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="alert alert-success hidden" id="contactSuccess">
+					<strong>Success!</strong> You message has been sent to us.
+				</div>
+				<div class="alert alert-error hidden" id="contactError">
+					<strong>Error!</strong> You message has not been sent to us.
+				</div>
+				<h2 class="short"><strong>Contact</strong> Us </h2>
+				<form class="clearfix" accept-charset="utf-8" method="get" action="#">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="name">Name</label>
+							<input type="text" placeholder="Name" value="" name="name" id="name" class="form-control input-lg">
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="email">Email Address</label>
+							<input type="email" placeholder="Email Address" value="" name="email" id="email" class="form-control input-lg">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<label for="message">Message</label>
+							<textarea rows="4" name="message" id="message" class="form-control"></textarea>
+						</div>
+					</div>
+					<button class="btn btn-primary btn-xlg" type="submit">Send Message</button>
+				</form>	
+			</div>
+			<div class="col-md-offset-2 col-md-4">
+				<br/>
+				<h4 class="pull-top">Get in<strong> touch</strong></h4>
+				<p>Placeholder text goes here.</p>
+				<hr>
+				<h4>NEI<strong> Office</strong></h4>
+				<ul class="list-unstyled">
+					<li><strong>Address: </strong>1200 18th Street Suite #901, Washington DC, 20036 United States</li>
+					<li><strong>Phone: </strong>(202)466-0222</li>
+					<li><strong>Email: </strong><a href="mailto:nei@ncbfaa.org">nei@ncbfaa.org</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>	
