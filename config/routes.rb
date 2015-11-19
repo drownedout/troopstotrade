@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'main/profile'
   get 'main/volunteer'
   get 'main/contact'
+  get 'main/login'
 
   resources :jobs
   get 'jobs/new'

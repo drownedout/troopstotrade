@@ -1,0 +1,18 @@
+<div class="container fill">
+	<div class="text-center">
+		<h1 class="volunteer_header">Sign Up Today!</h1>
+		<p class="volunteer_sub">Help make a difference in the lives of our veterans</p>
+		</div>
+	<div class="row">
+		<div class="col-md-5 text-center">
+			<h2>Users Sign Up Here!</h2>
+			<%= image_tag("Soldier.png", alt: "Soldier") %><br/>
+			<%=link_to "User Sign Up!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</div>
+		<div class="col-md-5 col-md-offset-2 text-center">
+			<h2>Organizations Sign Up Here!</h2>
+			<%= image_tag("bman.png", alt: "Bman") %> <br/>
+			<%=link_to "Organization Sign up!", new_org_registration_path, class: "btn btn-primary btn-large" %>
+		</div>
+	</div>
+</div>
