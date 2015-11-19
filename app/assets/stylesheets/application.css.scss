@@ -89,6 +89,11 @@ footer {
 
 }
 
+.margin_sign {
+	margin: 20px 0;
+	border-bottom: 1.5px solid #4d4d4d
+}
+
 .fill {
 	height: 80vh;
 }
@@ -191,12 +196,12 @@ footer {
 	padding: 20px 0;
 	margin-bottom: 20px;
 	font-size: 24px;
+	border-bottom: solid 1.5px #4d4d4d
 }
 
 .contact_header {
-	background-color: #acacac;
-	color: #ffffff;
 	margin-bottom: 50px;
+	background-color: #ffffff;
 }
 
 .offset_contact {
@@ -206,6 +211,26 @@ footer {
 .map_contact {
 	padding: 45px 0;
 	font-size: 24px;
+}
+
+/*** Volunteer Page ***/
+
+.volunteer_header {
+	font-size: 80px;
+	padding-top: 10px;
+}
+
+.volunteer_sub {
+	font-size: 24px;
+	border-bottom: solid 1.5px #4d4d4d;
+	margin-bottom: 20px;
+	
+}
+
+/*** Sign-up Devise Sessions Page ***/
+
+.pull-up {
+	margin-top:-7px;
 }
 
 /*** Bottom Render On Devise New ***/

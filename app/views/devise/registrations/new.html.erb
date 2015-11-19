@@ -1,54 +1,55 @@
-<div class="container">
-<h2>Sign Up Today!</h2>
-<p><em>All fields with a * are required</em></p>
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
 <div class="container">
+	<div class="text-center margin_sign">
+		<h2>Sign Up Today!</h2>
+		<p><em>All fields with a * are required</em></p>
+		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	  	<%= f.error_notification %>
+  	</div>
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-body">
 
 					  <div class="form-inputs">
 					    
 					    <div class="form-group">
-						    <%= f.label :name, "First Name" %> 
+						    <%= f.label :name, "First Name *" %> 
 						    <%= f.text_field :name, required: true, autofocus: true , placeholder: "First Name", class: "form-control" %> 
 					    </div>
 
 					    <div class="form-group">
-						    <%= f.label :lastname, "Last Name" %> 
+						    <%= f.label :lastname, "Last Name *" %> 
 						    <%= f.text_field :lastname, required: true, autofocus: true , placeholder: "Last Name", class: "form-control" %> 
 					    </div>
 
 					    <div class="form-group">
 
-					    <%= f.label :password, "Password" %> <br/>
+					    <%= f.label :password, "Password *" %> <br/>
 					    <%= f.hint "#{@minimum_password_length} characters minimum" if @minimum_password_length %> 
 					    <%= f.password_field :password, required: true, class: "form-control" %> 
 
 					    </div>
 					    <div class="form-group">
-					    	<%= f.label :password_confirmation, "Confirm Password" %>
+					    	<%= f.label :password_confirmation, "Confirm Password *" %>
 					    	<%= f.password_field :password_confirmation, required: true, class: "form-control" %>
 					    </div>
 					    <div class="form-group">
-					    	<%= f.label :email, "Email" %>
+					    	<%= f.label :email, "Email *" %>
 					    	<%= f.email_field :email, placeholder: "Email", required: true, class: "form-control" %>
 					    </div>
 					    <div class="form-group">	
-					    	<%= f.label :city, "City" %>
+					    	<%= f.label :city, "City *" %>
 					    	<%= f.text_field :city, placeholder: "City", required: true, class: "form-control" %> 
 					    </div>
 
 					    <div class="form-group">
-					    	<%= f.label :state, "State" %>
+					    	<%= f.label :state, "State *" %>
 					    	<%= f.text_field :state, placeholder: "State", required: true, class: "form-control" %> 
 					    </div>
 
 					    <div class="form-group">
-					    	<%= f.label :zip, "Zipcode" %>
+					    	<%= f.label :zip, "Zipcode *" %>
 					    	<%= f.text_field :zip, placeholder: "Zipcode", required: true, class: "form-control" %> 
 					    </div>
 
@@ -65,11 +66,11 @@
 					    	<%= f.select :highesteducation, ['Some High School', 'High School', 'Some College', 'Associate\'s Degree', 'Bachelor\'s Degree', 'Master\'s Degree', 'PHD', 'Other'], required: false, class: "form-control" %>
 					    </div>
 					    <div class="form-group">
-					    	<%= f.label :neicertification, "NEI Certification" %><br/>
+					    	<%= f.label :neicertification, "NEI Certification *" %><br/>
 					    	<%= f.select :neicertification, ['None','Certified Exports Specialist (CES)', 'Certified Customs Specialist (CCS)','Both (CES and CCS)'], required: true, class: "form-control" %> 
 					    </div>
 					    <div class="form-group">
-					    	<%= f.label :militarystatus, "Military Status" %><br/>
+					    	<%= f.label :militarystatus, "Military Status *" %><br/>
 					    	<%= f.select :militarystatus, ['Active', 'Inactive', 'Retired'], required: true, class: "form-control" %> 
 					    </div>
 
@@ -93,11 +94,10 @@
 					  </div>
 				</div>
 			</div>
-		</div>
+			<% end %>
+			<div class="container" id="render-new-bottom">
+			<%= render "devise/shared/links" %>
 	</div>
-</div>
-<% end %>
-	<div class="container" id="render-new-bottom">
-		<%= render "devise/shared/links" %>
+		</div>
 	</div>
 </div>
