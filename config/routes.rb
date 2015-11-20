@@ -3,14 +3,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :orgs
   devise_for :users
-  get 'main/index'
-  get 'main/about'
-  get 'main/pricing'
-  get 'main/database'
-  get 'main/profile'
-  get 'main/volunteer'
-  get 'main/contact'
-  get 'main/login'
+  get 'about', :to => 'main#about', :as => :main_about
+  get 'pricing', :to => 'main#pricing', :as => :main_pricing
+  get 'database', :to => 'main#database', :as => :main_database
+  get 'profile', :to => 'main#profile', :as => :main_profile
+  get 'volunteer', :to => 'main#volunteer', :as => :main_volunteer
+  get 'contact', :to => 'main#contact', :as => :main_contact
+  get 'signup', :to => 'main#signup', :as => :main_login
 
   resources :jobs
   get 'jobs/new'
