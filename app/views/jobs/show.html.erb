@@ -5,7 +5,7 @@
 			<div class="col-md-4">
 				<p><strong>Description:</strong> <%= @job.description %></p>
 				<p><strong>Company:</strong> <%= @job.org.company %></p>
-				<p><strong>Link:</strong> <%= link_to @job.url %></p>
+				<p><strong>Link:</strong> <%= link_to @job.url, @job.url %></p>
 				<p>Submitted <%= time_ago_in_words(@job.created_at) %> ago</p>
 			</div>
 		</div>
