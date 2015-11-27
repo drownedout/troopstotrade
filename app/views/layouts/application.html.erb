@@ -42,7 +42,7 @@
 	</div>
 
 	<% flash.each do |name, msg| %>
-		<%= content_tag(:div, msg, class: "alert alert-info") %>
+		<%= content_tag(:div, msg, class: "alert alert-info overlay col-md-12") %>
 	<% end %>
 
 	<%= yield %>

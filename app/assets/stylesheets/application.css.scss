@@ -3,12 +3,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 
 
-/*** Main applicaition styling ***/
+/*** Main application styling ***/
 
 *, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
+
 
 body { 
 	padding-top: 50px;
@@ -38,6 +39,10 @@ body {
 
 .navbar-text {
 	color: #ffffff !important;
+}
+
+.overlay {
+	position:absolute;
 }
 
 .jumbotron .media {

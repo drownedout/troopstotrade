@@ -3,7 +3,7 @@
 		<h2 class="text-center margin_sign">Sign Up Today!</h2>
 		<p class="text-center"><em>All fields with a * are required</em></p>
 		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-	  	<%= f.error_notification %>
+	  	<%= devise_error_messages! %>
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-default">
@@ -94,8 +94,8 @@
 			</div>
 			
 			<div class="container" id="render-new-bottom">
-			<%= render "devise/shared/links" %>
-	</div>
+				<%= render "devise/shared/links" %>
+			</div>
 		</div>
 	</div>
 	<% end %>

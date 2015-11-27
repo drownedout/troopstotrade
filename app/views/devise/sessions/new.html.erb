@@ -1,11 +1,8 @@
 <div class="fill">
-	<div class="container">
-		<div class="text-center margin_sign">
-		<h2>User Log In</h2>
+<div class="container">
+		<h2 class="text-center margin_sign">User Log In</h2>
 		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		<%= f.error_notification %>
-		</div>
-		<div class="container">
+		<%= devise_error_messages! %>
 			<div class="row">
 				<div class="col-md-offset-1 col-md-4">
 					<div class="panel panel-default">
@@ -33,7 +30,6 @@
 							    <%= f.button :submit, "Log in", class: "btn btn-primary" %>
 							  </div>
 
-							<% end %>
 						</div>
 					</div>
 				</div>
@@ -44,10 +40,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-offset-1 col-md-4">
-				<%= render "devise/shared/links" %>
+					<%= render "devise/shared/links" %>
 				</div>
-					
 			</div>
-		</div>
 	</div>
+	<% end %>
 </div>
