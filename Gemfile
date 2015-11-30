@@ -45,6 +45,8 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'draper', '~> 2.1'
 # Pundit
 gem 'pundit', '~> 1.0', '>= 1.0.1'
+# Sendgrid
+gem 'sendgrid-ruby'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

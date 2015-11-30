@@ -40,12 +40,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.gmail.com',
+    :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,
-    :user_name => ENV['GMAIL_USERNAME'],
-    :password => ENV['GMAIL_PASSWORD'],
-    :domain => ENV["mail.gmail.com"]
+    :user_name => ENV['app44081149@heroku.com'],
+    :password => Rails.application.secrets.sendgrid_password,
+    :domain => ENV["obscure-eyrie-5920.herokuapp.com"],
+    :enable_starttls_auto => true
   }
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
