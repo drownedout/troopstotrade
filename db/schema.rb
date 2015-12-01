@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127170203) do
+ActiveRecord::Schema.define(version: 20151201160516) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -75,8 +75,13 @@ ActiveRecord::Schema.define(version: 20151127170203) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "job"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
+  add_index "orgs", ["confirmation_token"], name: "index_orgs_on_confirmation_token", unique: true
   add_index "orgs", ["email"], name: "index_orgs_on_email", unique: true
   add_index "orgs", ["reset_password_token"], name: "index_orgs_on_reset_password_token", unique: true
 
