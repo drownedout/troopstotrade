@@ -85,8 +85,11 @@
 					    	<%= f.label :contact, "May We Contact You Directly?" %><br/>
 					    	<%= f.select :contact,['Yes', 'No'], required: false, class: "form-control" %>
 					    </div>
+					    <div class="form-group">
+					    	<%= f.label :tconfirm, raw("Do you accept the #{link_to('terms and conditions?', new_user_registration_path)}") %><br/>
+					    	<%= f.check_box :tconfirm, required: true, class: "form-control" %>
+					    </div>
 					  </div>
-
 					  <div class="form-actions">
 					    <%= f.button :submit, "Sign Up", class: "btn btn-primary"  %>
 					  </div>
